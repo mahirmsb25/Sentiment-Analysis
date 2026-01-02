@@ -1,63 +1,79 @@
-Book Review Sentiment Analysis (VADER vs Transformers)
+# Book Review Sentiment Analysis (VADER vs Transformers)
+
 A comparative sentiment analysis of book reviews using lexicon-based (VADER) and transformer-based models to examine accuracy–efficiency trade-offs in sentiment classification.
 
-📊 Overview
+## Overview
 
 This project analyzes sentiment in book review text using two fundamentally different approaches:
 
-VADER (Valence Aware Dictionary and sEntiment Reasoner) — a fast, rule-based sentiment analyzer used as a baseline model
-
-Transformer-based Model — a pre-trained deep learning model from HuggingFace capable of contextual sentiment understanding
+- **VADER**: A fast, rule-based sentiment analyzer used as a baseline model  
+- **Transformer-based model**: A pre-trained deep learning model from HuggingFace capable of contextual sentiment understanding  
 
 VADER is treated as a baseline to contextualize the performance gains achieved by transformer-based sentiment analysis.
 
-🎯 Key Findings
+## Key Findings
 
-Contextual Accuracy: Transformer models capture nuanced sentiment and contextual meaning more effectively than lexicon-based methods
+- Transformer models capture nuanced and contextual sentiment more effectively  
+- VADER provides significantly faster inference but struggles with complex or implicit sentiment  
+- The choice of model depends on the trade-off between speed and accuracy  
 
-Speed vs Accuracy: VADER offers significantly faster inference but struggles with complex or implicit sentiment
+## Getting Started
 
-Practical Trade-offs: VADER is suitable for speed-critical, real-time applications, while transformer models are better suited for accuracy-driven analysis
+### Prerequisites
 
-🚀 Getting Started
-Prerequisites
-Python 3.7 or higher
-pip package manager
+- Python 3.7 or higher
+- pip package manager
 
-Installation
-Clone the repository and install dependencies:
+### Installation
+
+```bash
 git clone <repository-url>
-cd Book-Review-Sentiment-Analysis
+cd "Book Review"
 pip install -r requirements.txt
+```
 
-Usage
-Run the analysis script:
+### Usage
+
+```bash
 python src/sentiment_analysis.py
+```
 
-The script performs the following steps:
-Loads book review data from data/book_reviews_sample.csv
-Cleans and preprocesses the text
-Applies sentiment analysis using both VADER and transformer models
-Generates comparative visualizations of sentiment distributions
+#### What the Script Does
 
-📁 Project Structure
-Book-Review-Sentiment-Analysis/
+1. Loads book review data from `data/book_reviews_sample.csv`
+2. Cleans and preprocesses the review text
+3. Applies sentiment analysis using VADER and transformer models
+4. Generates comparative visualizations of sentiment distributions
+
+## Project Structure
+
+```
+Book Review/
 ├── data/
 │   └── book_reviews_sample.csv
 ├── src/
 │   └── sentiment_analysis.py
 ├── requirements.txt
 └── README.md
+```
 
-🛠️ Technologies Used
-pandas, numpy — data manipulation and analysis
-NLTK — VADER sentiment analysis
-Transformers (HuggingFace) — transformer-based sentiment modeling
-PyTorch — deep learning backend
-Matplotlib — visualization
+## Technologies Used
 
-📈 Results
+- **pandas, numpy** - Data manipulation and analysis
+- **NLTK** - VADER sentiment analysis
+- **Transformers** - Transformer-based sentiment modeling (HuggingFace)
+- **PyTorch** - Deep learning backend
+- **Matplotlib** - Visualization
+
+## Results
+
 The project produces visual comparisons of sentiment classifications (positive, neutral, negative) across both models, highlighting differences in prediction behavior and model limitations.
 
-📝 License
+## License
+
 This project is intended for educational and research purposes.
+
+
+
+
+
